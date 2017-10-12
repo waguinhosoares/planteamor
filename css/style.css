@@ -13,12 +13,28 @@ html body header {
   padding: 25px;
 }
 
+#mainNav .navbar-toggler {
+  font-size: 14px;
+  padding: 11px;
+  text-transform: uppercase;
+  color: white;
+  border-color: white;
+  outline: none;
+}
+  
+#mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
+  color: white;
+  border-color: #E9537B;
+  background-color: #E9537B;
+}
+
 .navbar-brand {
   font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: white;
   font-size: 2em;
+  outline: none;
 }
 
 .navbar-brand:hover {
