@@ -27,8 +27,8 @@ html body header {
 
 .fa.fa-heart {
   color: #ED467B;
+  animation: heartbeat 1s infinite;
 }
-
 
 nav.navbar-brand a {
   color: #ffffff;
@@ -50,7 +50,7 @@ nav.navbar-brand a {
   color: #ffffff;
 }
 
-header.masterhead .name {
+header.masterhead .donation {
   display: block;
   margin: 0 auto 10px;
   color: #ffffff;
@@ -59,13 +59,23 @@ header.masterhead .name {
   font-weight: 700;
   font-size: 4.75em;
   text-align: center;
-}  
+}
+
+header.masterhead .textdn {
+  display: block;
+  margin: 0 auto 10px;
+  color: #ffffff;
+  font-family: 'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-size: 1.75em;
+  text-align: center;
+  padding-bottom: 50px;
+}
 
 header.masterhead img {
   display: block;
   margin: 0 auto 20px;
-  width: 32%;
-  padding-top: 50px; 
+  padding-top: 150px; 
 }
 
 hr.heart-light,
@@ -96,4 +106,117 @@ hr.heart-light {
 hr.heart-light:after {
   color: white;
   background-color: #E9537B; 
+}
+
+#gallery {
+  background: #ffffff;
+  color: #212529;
+}
+
+#gallery .textdn {
+  font-family: 'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 80px;
+}
+
+#gallery hr.heart-light {
+  border-color: #212529; 
+}
+
+#gallery hr.heart-light:after {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* galleryt */
+.tz-gallery {
+  padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+  padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+  padding: 10px;
+}
+
+.tz-gallery .lightbox:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -33px;
+  margin-left: -33px;
+  opacity: 0;
+  color: #fff;
+  font-size: 60px;
+  font-family: FontAwesome;
+  content: '\f00e';
+  pointer-events: none;
+  z-index: 9000;
+  transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(233, 83, 123, 0.7);
+  content: '';
+  transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+  opacity: 1;
+}
+
+.baguetteBox-button {
+  background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+  body {
+      padding: 0;
+  }
+}
+
+/* Animations */
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
 }
