@@ -154,14 +154,13 @@ hr.heart-light:after {
 
 /* Override bootstrap column paddings */
 .tz-gallery .row > div {
-  padding: 2px;
+  padding: 10px;
 }
 
 .tz-gallery .lightbox img {
   width: 100%;
   border-radius: 0;
   position: relative;
-  padding: 10px;
 }
 
 .tz-gallery .lightbox:before {
@@ -183,8 +182,8 @@ hr.heart-light:after {
 
 .tz-gallery .lightbox:after {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   opacity: 0;
